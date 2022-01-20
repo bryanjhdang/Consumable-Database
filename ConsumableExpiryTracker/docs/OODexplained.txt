@@ -1,0 +1,24 @@
+Task #1 - Listing items
+    The first use case that my application supports is listing the items. Because
+everything is contained inside an ArrayList of Consumable objects, I had to differentiate
+between food and drink items.
+
+This implementation falls under the OOD concept of INHERITANCE, where the FoodItem and
+DrinkItem classes inherit from the Consumable parent, allowing it to maintain the parent
+properties while adding their own.
+
+Because of that I was able to override the toString() method in each subclass to make
+the output unique depending on if it was a food vs a drink.
+("This is a food item." vs "This is a drink item.")
+
+--------------------------------------------------
+Task #2 - Removing an item
+    The second use case that my application supports is removing an item. When removing
+an item, you have to choose the corresponding item number (which is honestly just one number
+above its index in the ArrayList), which will then access the ArrayList and remove the
+item.
+
+This implementation falls under the OOD concept of AGGREGATION, because the
+ConsumableTextMenu class has a "has-a" relationship with the Consumable class. Since
+the relationship is implemented with an ArrayList, the multiplicity of the
+aggregation is 1:*.

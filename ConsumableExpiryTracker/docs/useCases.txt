@@ -1,0 +1,112 @@
+Use case of Option 1 - List all items
+    1. The user runs the ConsumablesTracker program with items saved in itemsList.json file
+    2. The program responds with a prompt listing a menu containing 7 options for
+       list all, add, remove, list expired, list non-expired, and list expired in 7 days respectively
+            "Choose an option by entering 1-7: "
+    3. The user types "1" to list all the items, presses enter
+    4. The program lists all the items stored in the system
+            The program lists all the items, with a block of information for each item
+            The program displays the item number, starting at 1
+            The program displays the type of item, "This is a food/drink item."
+            The program displays information about name, notes, price,
+            weight/volume, and expiry date of the item
+            The program displays the expiry status of the item
+    5. The program responds with a prompt listing a menu containing 7 options for
+       list all, add, remove, list expired, list non-expired, and list expired in 7 days respectively.
+            "Choose an option by entering 1-7: "
+    6. The user types "7" to exit the system, presses enter
+    7. The program exits after printing a message and terminates itself:
+            "Thank you for using the system."
+
+Variation #1
+    1.1. The user runs the ConsumablesTracker program with no items saved in itemsList.json file
+    1.2. The program responds with a prompt listing a menu containing 7 options for
+         list all, add, remove, list expired, list non-expired, and list expired in 7 days respectively
+            "Choose an option by entering 1-7: "
+    1.3. The user types "1" to list all the items, presses enter
+    1.4. The program shows the message:
+            "No items to show."
+    1.5. Continues with step 5
+
+--------------------------------------------------
+Use case of Option 2 - Add a new item
+    1. The user runs the ConsumablesTracker program with items saved in itemsList.json file
+    2. The program responds with a prompt listing a menu containing 7 options for
+       list all, add, remove, list expired, list non-expired, and list expired in 7 days respectively
+            "Choose an option by entering 1-7: "
+    3. The user types "2" to add a new item, presses enter
+    4. The program prompts the user for the item type
+            "Enter the type of the consumable (1-Food, 2-Drink): "
+    5. The user types "2" to add a new drink, presses enter
+    6. The program prompts the user for the name of the item
+            "Enter the name of the new item: "
+    7. The user types "Pepsi" for the name, presses enter
+    8. The program prompts the user for notes on the item
+            "Enter the notes of the new item: "
+    9. The user types "It's better than Coke!" for the notes, presses enter
+    10. The program prompts the user for the price of the item
+            "Enter the price of the new item: "
+    11. The user types "2.99" for the price, presses enter
+    12. The program prompts the user for the weight/volume of the item, depending
+        on if it's a food/drink item, respectively
+            "Enter the [weight (in g)] / [volume (in mL)] of the new item: "
+    13. The user types "2000" for the volume, presses enter
+    14. The program prompts the user for the year of the expiry date
+            "Enter the year of the expiry date: "
+    15. The user types "2022" for the expiry date year, presses enter
+    16. The program prompts the user for the month of the expiry date
+            "Enter the month of the expiry date (1-12): "
+    17. The user types "6" for the expiry date month, presses enter
+    18. The program prompts the user for the day of the expiry date
+            "Enter the day of the expiry date (1-28/29/30/31): "
+    19. The user types "1" for the expiry date day, presses enter
+    20. The program confirms the addition of the new item with a message
+            "___item name___ has been added to the list."
+    21. The program responds with a prompt listing a menu containing 7 options for
+        list all, add, remove, list expired, list non-expired, and list expired in 7 days respectively.
+            "Choose an option by entering 1-7: "
+    22. The user types "7" to exit the system, presses enter
+    23. The program exits after printing a message and terminates itself:
+            "Thank you for using the system."
+    24. Inside the itemsList.json file, the newly added item is added to the file
+
+Variation #1
+    1.1. In Step 11, the user types "-1" for the price, presses enter
+    1.2. The program prompts the user that their input is invalid
+            "Invalid price, try again: "
+    1.3. The user types "1.99" for the price, presses enter
+    1.4. Continues with Step 12
+
+--------------------------------------------------
+Use case of Option 3 - Remove an item
+    1. The user runs the ConsumablesTracker program with items saved in itemsList.json file
+    2. The program responds with a prompt listing a menu containing 7 options for
+       list all, add, remove, list expired, list non-expired, and list expired in 7 days respectively
+            "Choose an option by entering 1-7: "
+    3. The user types "3" to remove an item, presses enter
+    4. The program lists all the items stored in the system
+            The program lists all the items, with a block of information for each item
+            The program displays the item number, starting at 1
+            The program displays the type of item, "This is a food/drink item."
+            The program displays information about name, notes, price,
+            weight/volume, and expiry date of the item
+            The program displays the expiry status of the item
+    5. The program prompts the user to delete an item
+            "Enter the item number you want to remove (0 to cancel): "
+    6. The user types a number between 1 and the size of the list, presses enter
+    7. The program confirms the item's deletion with a message
+            "___item name___ has been removed from the list."
+    8. The program responds with a prompt listing a menu containing 7 options for
+       list all, add, remove, list expired, list non-expired, and list expired in 7 days respectively.
+            "Choose an option by entering 1-7: "
+    9. The user types "7" to exit the system, presses enter
+    10. The program exits after printing a message and terminates itself:
+            "Thank you for using the system."
+    11. Inside the itemsList.json file, the deleted item is removed from the file
+
+Variation #1
+    1.1. In Step 6, the user types a number less than 0, or greater than the size of the list, presses enter
+    1.2. The program prompts the user that their input was invalid
+            "Not a valid option, try again: "
+    1.3. The user types a number between 1 and the size of the list, presses enter
+    1.4. Continues with Step 7

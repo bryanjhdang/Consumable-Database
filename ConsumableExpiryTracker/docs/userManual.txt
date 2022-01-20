@@ -1,0 +1,53 @@
+User Manual
+-----------
+
+Operation 1: List all items
+    - View to list all items is set by default upon loading the application
+    - To manually set view all items, click on the "All" button
+    - User is able to scroll through the list of items if the list is big enough
+    - Items will be shown from earliest to the latest expiry date
+    - If there are no items to show, it will display "No items to show."
+
+Operation 2: Add a new item
+    - To add an item, the user must press the "Add Item" button
+    - Clicking on said button will bring up a pop-up window (JDialog)
+    - The new window will contain several fields that the user must enter, and all fields must be valid
+    - Fields include:
+        - Item Type (food / drink)
+        - Name
+        - Notes
+        - Price
+        - Measurement (weight / volume)
+        - Expiry date
+    - Validity checks include:
+        1. All fields are filled (excluding notes)
+        2. Price and measurement fields are only numbers
+        3. Price and measurement fields are non-negative
+    - Once all fields are detected as valid, the new item will be added to the item list
+            - If detected as invalid, will display a pop-up message mentioning the appropriate issue
+
+Operation 3: Remove an item
+    - To remove to an item, the user must press the "Remove" button next to each individual item on the list
+    - Clicking on said button will remove the corresponding item from the item list
+
+Operation 4: List expired items
+    - Click on the "Expired" button to switch view
+    - User is able to scroll through the list of items if the list is big enough
+    - Items will be shown from earliest to the latest expiry date
+    - If there are no items to show, it will display "No expired items to show."
+
+Operation 5: List items that are not expired
+    - Click on the "Not Expired" button to switch view
+    - User is able to scroll through the list of items if the list is big enough
+    - Items will be shown from earliest to the latest expiry date
+    - If there are no items to show, it will display "No non-expired items to show."
+
+Operation 6: List items expiring in 7 days
+    - Click on the "Expiring in 7 Days" button to switch view
+    - User is able to scroll through the list of items if the list is big enough
+    - Items will be shown from earliest to the latest expiry date
+    - If there are no items to show, it will display "No items expiring in 7 days to show."
+
+Operation 7: Exit
+    - Click on the window 'X' in the main menu to close the window
+    - Upon clicking the 'X', the application saves item list data in a .json file

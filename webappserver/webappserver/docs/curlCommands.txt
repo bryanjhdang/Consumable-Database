@@ -1,0 +1,26 @@
+# Read Ping:
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/ping
+
+# List All Items:
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/listAll
+
+# Add Food Item:
+curl -i -H "Content-Type: application/json" -X POST -d "{\"itemType\":1,\"name\":\"Dumpling\",\"notes\":\"\",\"price\":6.0,\"measurement\":390.5,\"expiryDate\":\"2021-12-15\"}" localhost:8080/addItem/food
+
+# Add Drink Item:
+curl -i -H "Content-Type: application/json" -X POST -d "{\"itemType\":2,\"name\":\"Coke\",\"notes\":\"\",\"price\":6.0,\"measurement\":390.5,\"expiryDate\":\"2021-11-15\"}" localhost:8080/addItem/drink
+
+# Remove Item (can replace "1" with id of item)
+curl -i -H "Content-Type: application/json" -X POST localhost:8080/removeItem/1
+
+# List Expired Items
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/listExpired
+
+# List Non-Expired Items
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/listNonExpired
+
+# List Expiring In 7 Days Items
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/listExpiringIn7Days
+
+# Exit
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/exit
